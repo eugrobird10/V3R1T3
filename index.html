@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFOTH Character Wiki</title>
+  <link rel="stylesheet" href="libs/page-flip.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      font-family: 'IM Fell English', Georgia, serif;
+      overflow: hidden;
+    }
+
+    .bookContainer {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .flip-book {
+      width: 100%;
+      max-width: 1100px;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
+      background: url('img/book_texture.webp') center center / cover no-repeat;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      color: #2c1608;
+      text-align: center;
+      position: relative;
+    }
+
+    .char-img {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: auto;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .page-wrapper img.sword-img {
+      max-width: 100%;
+      max-height: 550px;
+      width: auto;
+      height: auto;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .page-wrapper h2, .page-wrapper p {
+      margin: 10px 0;
+    }
+
+    .cover-page {
+      background: url('img/cover.webp') center center / cover no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .page-shadow {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    .flip-book .page:first-child {
+      z-index: 100;
+      transform: translateZ(1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="bookContainer">
+    <div class="page-shadow"></div>
+    <div id="flipbook" class="flip-book">
+
+      <!-- Cover -->
+      <div class="page">
+        <div class="page-wrapper cover-page">
+          <h1 style="color:white; font-size: 48px; text-shadow: 2px 2px 4px #000;">SFOTH Wiki</h1>
+        </div>
+      </div>
+
+      <!-- Mello -->
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="char-img" src="img/Mello.png" alt="Mello" />
+          <h2>Mello</h2>
+          <p><strong>Capacités:</strong> Supervitesse (ADN), Cryokinésie, Intelligence élevée, Chapeau de cow-boy stylé</p>
+          <p><strong>Don du Wither:</strong> Tentacules, Gravité, Dématérialisation</p>
+          <p><strong>Points faibles:</strong> Compassion, ne peut pas courir à vitesse max (sinon... boum)</p>
+          <p><strong>Liens:</strong> William (fils), Hikari (petit-fils), Ness (ami), YggDrasil (partie de lui), Kuroko ([REDACTED])</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="sword-img" src="img/IceDagger.webp" alt="Ice Dagger" />
+          <h2>Ice Dagger</h2>
+          <p>Une dague faite de glace pure, forgée dans les pics les plus froids. Transmet le pouvoir du froid à son porteur.</p>
+        </div>
+      </div>
+
+      <!-- William -->
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="char-img" src="img/William.png" alt="William" />
+          <h2>William</h2>
+          <p><strong>Traits:</strong> Fier, Loyal, Puissant</p>
+          <p><strong>Rôle:</strong> Gardien de l'épée du feu</p>
+          <p><strong>Relations:</strong> Père de Mello</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="sword-img" src="img/FireBrand.webp" alt="FireBrand" />
+          <h2>FireBrand</h2>
+          <p>Épée de flammes, alimentée par la rage et la passion. Brûle tout sur son passage.</p>
+        </div>
+      </div>
+
+      <!-- Ness -->
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="char-img" src="img/Ness.png" alt="Ness" />
+          <h2>Ness</h2>
+          <p><strong>Traits:</strong> Silencieux, Tacticien, Loyal</p>
+          <p><strong>Rôle:</strong> Ami et stratège</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="sword-img" src="img/Ghostwalker.webp" alt="Ghostwalker" />
+          <h2>Ghostwalker</h2>
+          <p>Lame spectrale, invisible et silencieuse. Confère l'invisibilité temporaire.</p>
+        </div>
+      </div>
+
+      <!-- Hikari -->
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="char-img" src="img/Hikari.png" alt="Hikari" />
+          <h2>Hikari</h2>
+          <p><strong>Traits:</strong> Rapide, Dévoué, Jeune prodige</p>
+          <p><strong>Relations:</strong> Petit-fils de Mello</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="sword-img" src="img/Windforce.webp" alt="Windforce" />
+          <h2>Windforce</h2>
+          <p>Arc magique capable de tirer des flèches de vent. Inarrêtable en vol.</p>
+        </div>
+      </div>
+
+      <!-- Kuroko -->
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="char-img" src="img/Kuroko.png" alt="Kuroko" />
+          <h2>Kuroko</h2>
+          <p><strong>Traits:</strong> Ténébreux, Imprévisible, Puissant</p>
+          <p><strong>Info:</strong> Dossier classifié. [REDACTED]</p>
+        </div>
+      </div>
+      <div class="page">
+        <div class="page-wrapper">
+          <img class="sword-img" src="img/Darkheart.webp" alt="Darkheart" />
+          <h2>Darkheart</h2>
+          <p>Épée du chaos et des ténèbres. Aspire la vie de ceux qu'elle touche.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="libs/page-flip.browser.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const book = document.getElementById("flipbook");
+
+      const pageFlip = new St.PageFlip(book, {
+        width: 550,
+        height: 733,
+        size: "stretch",
+        minWidth: 315,
+        maxWidth: 2000,
+        minHeight: 400,
+        maxHeight: 3000,
+        maxShadowOpacity: 0.5,
+        showCover: true,
+        mobileScrollSupport: true,
+      });
+
+      pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+    });
+  </script>
+</body>
+</html>
